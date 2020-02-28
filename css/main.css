@@ -1,0 +1,644 @@
+    /* hdpi */   
+   @media screen and (max-width:240px) {
+	   	/* 主体部分 */
+	   	 #app{
+	   	 	width: 100%;
+	   	 	height: 100%;
+	   	 	overflow: hidden;
+	   	 	margin: 0px;
+	   	 	padding: 0px;
+	   }
+	   	/* 头部 */
+	     .header{
+	        width: 100%;
+	        height: 45px;
+	        background-color: #029be9;
+	        display: flex;
+	        align-items: center;
+	   }
+	     .form-control{
+	        height: 30px;
+	        margin-left:15px;
+	   }
+	     img{
+	        z-index: 9;
+	        margin-left: -20px;
+	        width: 25px; 
+	        height: 25px;
+	        cursor: pointer;
+	   }
+	    /* 歌单 */
+	     .musicList{
+	        position: absolute;
+	        width: 100%;
+	        height: 315px;
+	        z-index: 99;
+	   }
+	     ul{
+	     	z-index: 99;
+	        width: 100%;
+	        height: 315px;
+	        overflow-y:scroll;
+	   }
+	     li{
+	        list-style: none;
+	        width: 100%;
+	        height: 40px;
+	        display: flex;
+	        align-items: center;
+	        justify-content: space-between;
+	        cursor: pointer;
+	        margin-left: -20px;       
+	   }
+	    .active{
+	        background-color: #f5f5f5;
+	    }
+	     .musicList a{
+	        white-space: nowrap;    /* 文字强制不换行 */
+	        text-overflow:ellipsis; /* 文本溢出显示省略号 */
+	        overflow:hidden;  /* 文本溢出隐藏 */
+	        text-decoration: none;
+	        color: #464646;
+	   }
+	    /* 音频 */
+	     .rotate{
+	        width: 100%;
+	        height: 45px;
+	        z-index: 9;
+	        
+	   }
+	     .myaudio{
+	       width: 100%;
+	       height: 45px;
+	       z-index: 9;
+	       position: absolute;
+	       bottom: 0px;
+	   }
+	   	/* 图片 */
+	   	.img{
+	   	  width: 100%;
+	   	  height: 84%;
+	   }
+	    .image{
+	      width: 100%;
+	      height: 84%;
+	      position: absolute;
+	      top: 45px;
+	      left: 20px;
+	    }
+	     /* mv */
+	    .video_con video{
+	      width: 100%;
+	      height: 250px;
+	      z-index:999;
+	      position: absolute;	      
+	      left: 0px;
+	      /*vertical-align: middle;*/
+	      top: 20vh;
+	      z-index: 99999;
+	   }
+	    .mask{
+	      width: 100%; 
+	      height: 100vh; 
+	      background-color: rgba(0, 0, 0, 0.8); 
+	      z-index:99;
+	      position: absolute;
+	      top: 0px;
+	      left: 0px;
+	      z-index: 9999;
+	   } 	    	   
+   	   /* 歌曲评论 */
+   	     .hotComments{
+   	     	display: none;
+   	     }
+   	  
+   }
+   /* iphone4 5 */
+   @media screen and (max-width:320px) and (min-width: 241px ) {
+	/* 主体部分 */
+	   	 #app{
+	   	 	width: 100%;
+	   	 	height: 100%;
+	   	 	margin: 0px;
+	   	 	padding: 0px;
+	   	 	overflow: hidden;
+	   }
+	   	/* 头部 */
+	     .header{
+	        width: 100%;
+	        height: 60px;
+	        background-color: #029be9;
+	        display: flex;
+	        align-items: center;
+	        z-index: 999;
+	   }
+	     .form-control{
+	        height: 35px;
+	        margin-left:20px;
+	   }
+	     img{
+	        z-index: 9;
+	        margin-left: -20px;
+	        width: 25px; 
+	        height: 25px;
+	        cursor: pointer;
+	   }
+	    /* 歌单 */
+	     .musicList{
+	        position: absolute;
+	        width: 100%;
+	        height: 78vh;
+	        z-index: 999;
+	   }
+	     ul{
+	     	z-index: 999;
+	        width: 100%;
+	        height: 78vh;
+	        overflow-y:scroll;
+	   }
+	     li{
+	        list-style: none;
+	        width: 100%;
+	        height: 40px;
+	        display: flex;
+	        align-items: center;
+	        justify-content: space-between;
+	        cursor: pointer;
+	        margin-left: -20px;       
+	   }
+	    .active{
+	        background-color: #f5f5f5;
+	    }
+	     .musicList a{
+	        white-space: nowrap;    /* 文字强制不换行 */
+	        text-overflow:ellipsis; /* 文本溢出显示省略号 */
+	        overflow:hidden;  /* 文本溢出隐藏 */
+	        text-decoration: none;
+	        color: #464646;
+	   }
+	    /* 音频 */
+	     .rotate{
+	        width: 100%;
+	        height: 45px;
+            z-index: 999;
+	   }
+	     .myaudio{
+	       width: 100%;
+	       height: 45px;
+	       position: absolute;
+	       bottom: 0px;
+	       z-index: 999;
+	   }
+	   	/* 图片 */
+	   	.img{
+	   	  width: 100%;
+	   	  height: 84%;
+	   }
+	    .image{
+	      width: 100%;
+	      height: 84%;
+	      position: absolute;
+	      top: 60px;
+	      left: 20px;
+	    }
+	     /* mv */
+	    .video_con video{
+	      width: 100%;
+	      height: 250px;
+	      z-index:999;
+	      position: absolute;	      
+	      left: 0px;
+	      /*vertical-align: middle;*/
+	      top: 20vh;
+	      z-index: 99999;
+	   }
+	    .mask{
+	      width: 100%; 
+	      height: 100vh; 
+	      background-color: rgba(0, 0, 0, 0.8); 
+	      z-index:99;
+	      position: absolute;
+	      top: 0px;
+	      left: 0px;
+	      z-index: 9999;
+	   } 	    	    
+   	   /* 歌曲评论 */
+   	     .hotComments{
+   	     	display: none;
+   	     }   	
+   } 
+   /* iphone6 6p */
+   @media screen and (max-width: 479px) and (min-width:321px) {
+     /* 主体部分 */
+	   	 #app{
+	   	 	width: 100%;
+	   	 	height: 100%;
+	   	 	margin: 0px;
+	   	 	padding: 0px;
+	   	 	display: flex;
+	   	 	flex-wrap: wrap;
+	   	 	align-content: flex-start;
+	   	 	overflow: hidden;
+	   }
+	   	/* 头部 */
+	     .header{
+	        width: 100%;
+	        height: 80px;
+	        background-color: #029be9;
+	        display: flex;
+	        align-items: center;
+	        z-index: 999;
+	   }
+	     .form-control{	     	
+	        height:40px;
+	        margin-left: 25px;
+	   }
+	     img{
+	        z-index: 9;
+	        margin-left: -20px;
+	        width: 25px; 
+	        height: 25px;
+	        cursor: pointer;
+	   }
+	    /* 歌单 */
+	     .musicList{	        
+	        width: 100%;
+	        height: 77vh;
+	        z-index: 999;
+	   }
+	     ul{
+	     	z-index: 999;
+	        width: 100%;
+	        height: 77vh;
+	        overflow-y: scroll;
+	   }
+	     li{
+	        list-style: none;
+	        width: 100%;
+	        height: 40px;
+	        display: flex;
+	        align-items: center;
+	        justify-content: space-between;
+	        cursor: pointer;
+	        margin-left: -20px;       
+	   }
+	     .active{
+	        background-color: #f5f5f5;
+	    }
+	     .musicList a{
+	        white-space: nowrap;    /* 文字强制不换行 */
+	        text-overflow:ellipsis; /* 文本溢出显示省略号 */
+	        overflow:hidden;  /* 文本溢出隐藏 */
+	        text-decoration: none;
+	        color: #464646;
+	   }	  
+	    /* 音频 */
+	     .rotate{
+	        width: 100%;
+	        z-index: 999;	       
+	   }
+	     .myaudio{
+	       z-index: 999;
+	       width: 100%;
+	       position: absolute;
+	       bottom: 5px;
+	   }
+	     /* mv */
+	    .video_con video{
+	      width: 100%;
+	      height: 250px;
+	      z-index:999;
+	      position: absolute;	      
+	      left: 0px;
+	      /*vertical-align: middle;*/
+	      top: 20vh;
+	      z-index: 99999;
+	   }
+	    .mask{
+	      width: 100%; 
+	      height: 100vh; 
+	      background-color: rgba(0, 0, 0, 0.8); 
+	      z-index:99;
+	      position: absolute;
+	      top: 0px;
+	      left: 0px;
+	      z-index: 9999;
+	   }  
+	   	/* 图片 */
+	   	.img{
+	   	  width: 100%;
+	   	  height: 95%;
+	   }
+	    .image{
+	      width: 100%;
+	      height: 95%;
+	      position: absolute;
+	      top: 0px;
+	      left: 20px;
+	    }
+   	   /* 歌曲评论 */
+   	    .hotComments{
+   	     	display: none;
+   	     }   	   	 
+   }
+   /* ipad */
+   @media only screen and (min-width: 480px) and (max-width: 767px) {
+	#app{
+	   padding: 0px;
+	   margin: 0px;
+       width: 100%;
+       height: 385px;
+       border: 1px #009ce9 solid;              
+    }
+    /* 头部 */
+    .header{
+       width: 100%;
+       height: 65px;
+       background-color: #029be9;
+       display: flex;
+       align-items: center;
+    }
+    .form-control{
+       height: 30px;
+       margin-left:35px;
+   }
+    img{
+      z-index: 9;
+      margin-left: -10px;
+      width: 25px; 
+      height: 25px;
+      cursor: pointer;
+   }
+    /* 歌单 */
+    .musicList{
+       position: absolute;
+       top: 10;
+       right: 0px;
+       width: 40%;
+       height: 260px;
+   }
+    ul{
+       width: 100%;
+       height: 260px;
+       overflow-y:scroll;
+       border-left: 1px #e8e8e8 solid;
+   }
+    li{
+      list-style: none;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      margin-left: -20px;       
+   }
+    ul li:hover{
+      background-color: #f5f5f5;
+    }
+    .active{
+      background-color: #f5f5f5;
+    }
+    .musicList a{
+      white-space: nowrap;    /* 文字强制不换行 */
+      text-overflow:ellipsis; /* 文本溢出显示省略号 */
+      overflow:hidden;  /* 文本溢出隐藏 */
+      text-decoration: none;
+      color: #464646;
+   }
+    /* 音频 */
+    .rotate{
+       width: 100%;
+       height: 45px;
+       padding-top: 110px;
+   }
+    .myaudio{
+       width: 100%;
+       height: 45px;
+       color: white;
+   }
+	/* 旋转的动画 */
+	@keyframes Rotate {
+	  from {
+	    transform: rotateZ(0);
+	  }
+	  to {
+	    transform: rotateZ(360deg);
+	  }
+	}
+    /* 图片 */
+    .img{
+       width: 30%;
+       height: 100PX;
+       margin-left: 80px;
+       margin-top: 60px ;
+       position: relative;
+   }
+    .image{
+       position: absolute;
+       width: 100%;
+       height: 150px;
+       border-radius: 100%;
+       animation-name: Rotate;
+	   animation-iteration-count: infinite;
+	   animation-play-state: paused;
+	   animation-timing-function: linear;
+	   animation-duration: 15s;
+   }
+    	/* 是否正在播放 */
+	.img.playing .image {
+	  animation-play-state: running;
+	}
+    /* 评论 */
+    .hotComments{
+       display: none;
+    }
+     /* mv */
+    .video_con video{
+      height: 250px;
+      z-index:999; 
+      position: absolute;
+      top: 10px;
+      text-align: center;
+   }
+    .mask{
+      width: 100%; 
+      height: 385px; 
+      background-color: rgba(0, 0, 0, 0.8); 
+      position:absolute; 
+      top:0px;
+      z-index:99;
+   }   	  
+   }
+   /* 电脑 */
+   @media only screen and (min-width: 1200px) {
+   	#app{
+       width: 50%;
+       height: 650px;
+       border: 1px #009ce9 solid;
+       margin: 5vh auto;
+       position: relative;
+       overflow: hidden; 
+    }
+    /* 头部 */
+    .header{
+       width: 100%;
+       height: 45px;
+       background-color: #029be9;
+       display: flex;
+       align-items: center;
+    }
+    .form-control{
+       height: 30px;
+       margin-left:15px;
+       /* background-image: url(img/sousuo.png);
+       background-repeat:no-repeat;
+       background-position: right;
+       background-size: 22px;
+       background-position-x: 350px;  */
+   }
+    img{
+      z-index: 9;
+      margin-left: -20px;
+      width: 25px; 
+      height: 25px;
+      cursor: pointer;
+   }
+    /* 歌单 */
+    .musicList{
+       position: absolute;
+       top: 10;
+       right: 0px;
+       width: 40%;
+       height: 530px;
+   }
+    ul{
+       width: 100%;
+       height: 530px;
+       overflow-y:scroll;
+       border-left: 1px #e8e8e8 solid;
+   }  	
+    li{
+      list-style: none;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      margin-left: -20px;       
+   }
+    ul li:hover{
+      background-color: #f5f5f5;
+    }
+    .active{
+      background-color: #f5f5f5;
+    }
+    .musicList a{
+      white-space: nowrap;    /* 文字强制不换行 */
+      text-overflow:ellipsis; /* 文本溢出显示省略号 */
+      overflow:hidden;  /* 文本溢出隐藏 */
+      text-decoration: none;
+      color: #464646;
+   }
+    /* 音频 */
+    .rotate{
+       width: 100%;
+       height: 45px;
+       padding-top: 0px;
+   }
+    .myaudio{
+       width: 100%;
+       height: 45px;
+       color: white;
+   }
+    /* 图片 */
+	/* 旋转的动画 */
+	@keyframes Rotate {
+	  from {
+	    transform: rotateZ(0);
+	  }
+	  to {
+	    transform: rotateZ(360deg);
+	  }
+	}
+    .img{
+       width: 30%;
+       height: 36%;
+       margin-left: 120px;
+       margin-top: 60px ;
+       position: relative;
+       border-radius: 100%;
+   }
+    .image{
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       border-radius: 100%;
+       animation-name: Rotate;
+	   animation-iteration-count: infinite;
+	   animation-play-state: paused;
+	   animation-timing-function: linear;
+	   animation-duration: 15s;
+   }
+	/* 是否正在播放 */
+	.img.playing .image {
+	   animation-play-state: running;
+	}
+    /* 评论 */
+    .hotComments{
+       width: 60%;
+       height: 200px;
+       margin-top: 64px;
+       display: flex;
+       flex-wrap: wrap;
+       overflow-y:scroll;
+       border: 1px #e8e8e8 solid;
+    }
+    dl{
+      width: 100%;
+      height:200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: space-between;		
+    }
+    dt{
+      width: 50%;
+      height: 100px;
+      overflow: hidden;
+    }
+    dt img{
+      width: 50%;
+      height: 100px;
+      border-radius: 100%;
+      margin-left: 10px;
+    }
+    dd{
+      width: 100%;
+      height: 80px;
+      white-space: wrap;    /* 文字强制换行 */
+      text-overflow: ellipsis; /* 文本溢出显示省略号 */
+      overflow:hidden;  /* 文本溢出隐藏 */
+      border-bottom: 1px lightgrey solid;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+     /* mv */
+    .video_con video{
+      height: 400px;
+      z-index:999; 
+      position: absolute;
+      top: 120px;
+      text-align: center;
+   }
+    .mask{
+      width: 100%; 
+      height: 650px; 
+      background-color: rgba(0, 0, 0, 0.8); 
+      position:absolute; 
+      top:0px;
+      z-index:99;
+   }
+   }

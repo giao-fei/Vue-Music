@@ -24,24 +24,24 @@ var vm = new Vue({
        methods: {
           searchMusic:function(){
               var that = this;
-              axios.get("https://autumnfish.cn/search?keywords="+this.query)
+              axios.get("https://netease-cloud-music-api-puce-five.vercel.app/search?keywords="+this.query)
               .then(function(response){
                  that.musicList = response.data.result.songs;
               },function(err){})
           },
           playMusic:function(musicId){
               var that = this;
-              axios.get("https://autumnfish.cn/song/url?id="+musicId)
+              axios.get("https://netease-cloud-music-api-puce-five.vercel.app/song/url?id="+musicId)
               .then(function(response){
                  that.musicUrl = response.data.data[0].url;
               },function (err){})
             // 歌曲图片
-            axios.get("https://autumnfish.cn/song/detail?ids="+musicId)
+            axios.get("https://netease-cloud-music-api-puce-five.vercel.app/song/detail?ids="+musicId)
             .then(function(response) {
                  that.musicCover = response.data.songs[0].al.picUrl;
             },function(err){})
             // 歌曲评论获取
-            axios.get("https://autumnfish.cn/comment/hot?type=0&id="+musicId)
+            axios.get("https://netease-cloud-music-api-puce-five.vercel.app/comment/hot?type=0&id="+musicId)
             .then(function(response){
                  that.hotComments = response.data.hotComments;
             },function(err){})
@@ -60,7 +60,7 @@ var vm = new Vue({
          // 播放mv
          playMV:function(mvid) {
             var that = this;
-            axios.get("https://autumnfish.cn/mv/url?id="+mvid)
+            axios.get("https://netease-cloud-music-api-puce-five.vercel.app/mv/url?id="+mvid)
             .then(function(response){
               that.isShow = true;
               that.mvUrl = response.data.data.url;            
@@ -75,6 +75,11 @@ var vm = new Vue({
          // 双击歌单背景
          change:function(index){
          	this.number=index;
+         },
+         login() {
+           axios.get('https://netease-cloud-music-api-puce-five.vercel.app/register/anonimous').then(res => {
+              console.log(res);
+           })
          }
         }
    });

@@ -478,7 +478,7 @@
        border: 1px #009ce9 solid;
        margin: 5vh auto;
        position: relative;
-       overflow: hidden; 
+       /* overflow: hidden;  */
     }
     /* 头部 */
     .header{

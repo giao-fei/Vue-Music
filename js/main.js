@@ -22,12 +22,12 @@ var vm = new Vue({
           isPlaying: false
        },
        methods: {
-          searchMusic:function(){
+          searchMusic() {
               var that = this;
-              axios.get("https://netease-cloud-music-api-puce-five.vercel.app/search?keywords="+this.query)
+              axios.get("https://netease-cloud-music-api-puce-five.vercel.app/cloudsearch?keywords="+this.query)
               .then(function(response){
                  that.musicList = response.data.result.songs;
-              },function(err){})
+              })
           },
           playMusic:function(musicId){
               var that = this;

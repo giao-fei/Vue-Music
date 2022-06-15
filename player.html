@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>播放器</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
@@ -21,7 +21,7 @@
          <ul>
           <li v-for="(item,index) in musicList" @dblclick="dblclick" :class="{active:index===number}">
           	<a href="javascript:;" @click="playMusic(item.id),change(index)" >{{item.name}}</a>
-            <span v-if="item.mvid!=0" @click="playMV(item.mvid)"><img src="img/play.png"></span>
+            <span v-if="item.mvid!=0" @click="playMV(item.mv)"><img src="img/play.png"></span>
          </li>
          </ul>
         </div>
@@ -40,17 +40,19 @@
         </div>
         <!-- 遮罩层 -->
         <div class="video_con" style="display:none;" v-show="isShow">
-           <video controls="controls" :src="mvUrl"></video>
+           <video controls="controls" :src="mvUrl" autoplay></video>
            <div class="mask" @click="hide"></div>
         </div>
         <!-- 播放器 -->
         <div class="rotate">
-           <audio ref='' @play="play" @pause="pause" :src='musicUrl' controls autoplay noloop class='myaudio'></audio>
+           <audio ref='audio' @play="play" @pause="pause" :src='musicUrl' controls autoplay noloop class='myaudio'></audio>
         </div>
         <!-- <button @click="login">登录</button> -->
    </div>
+<link rel="stylesheet" href="https://unpkg.com/vant@2.12/lib/index.css"/>
 <script src="js/axios.min.js" type="text/javascript"></script>
 <script src="js/vue-2.4.0.js" type="text/javascript"></script>
+<script src="https://unpkg.com/vant@2.12/lib/vant.min.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>

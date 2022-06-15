@@ -1,7 +1,8 @@
 var vm = new Vue({
        el: "#app",
        data: {
-          query: '',
+         bodyHeight: document.documentElement.clientHeight || document.documentElement.bodyHeight,
+         query: '',
          // 歌曲清单
           musicList: [],
          // 歌曲地址
@@ -58,13 +59,20 @@ var vm = new Vue({
             this.isPlay = false; 
           },
          // 播放mv
-         playMV:function(mvid) {
+         playMV(mvid) {
             var that = this;
+            that.isPlaying = true;
+            that.$refs.audio.pause();
+           
             axios.get("https://netease-cloud-music-api-puce-five.vercel.app/mv/url?id="+mvid)
-            .then(function(response){
-              that.isShow = true;
-              that.mvUrl = response.data.data.url;            
-            },function(err){})
+            .then(res => {
+               if(res.data.data.code == 404) {
+                 alert('当前歌曲木有MV~')
+               } else {
+                 that.isShow = true;
+                 that.mvUrl = res.data.data.url;
+               }      
+            })
             
          },
          // 隐藏

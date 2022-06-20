@@ -21,7 +21,7 @@
          <ul>
           <li v-for="(item,index) in musicList" @dblclick="dblclick" :class="{active:index===number}">
           	<a href="javascript:;" @click="playMusic(item.id),change(index)" >{{item.name}}</a>
-            <span v-if="item.mvid!=0" @click="playMV(item.mv)"><img src="img/play.png"></span>
+            <span v-if="item.mv!=0" @click="playMV(item.mv)"><img src="img/play.png"></span>
          </li>
          </ul>
         </div>
